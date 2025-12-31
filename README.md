@@ -1,6 +1,6 @@
 # typst-templates
 
-This repository contains some custom non-published templates for **Typst**, the new modern open source foundation for document creation.
+This repository contains some custom non-published templates for [**Typst**](https://typst.app/), the new modern open source foundation for document creation.
 
 ## Structure
 
