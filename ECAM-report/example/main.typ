@@ -19,3 +19,8 @@
   language: "en",
 )
 
+= Section
+This is an example document to demonstrate the ECAM report template.
+
+== Subsection
+Here is some sample content for the subsection.
