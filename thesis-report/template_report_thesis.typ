@@ -122,13 +122,13 @@
   // Supervisor and tutor information
   text(
     if report-type == "thesis" {
-      if language == "en" { "Promoter: " } else { "Promoteur : " }
+      if language == "en" { "Promoter:" } else { "Promoteur :" }
     } else {
-      if language == "en" { "Supervisor: " } else { "Superviseur : " }
+      if language == "en" { "Supervisor:" } else { "Superviseur :" }
     },
   )
   h(1fr)
-  text(if language == "en" { "Tutor: " } else { "Tuteur : " })
+  text(if language == "en" { "Tutor:" } else { "Tuteur :" })
   linebreak()
   text(supervisor)
   h(1fr)
