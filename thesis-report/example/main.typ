@@ -2,6 +2,7 @@
 
 #show: report.with(
   title: [Master Thesis Report],
+  report-type: "internship",
   authors: (
     "John Doe",
   ),
