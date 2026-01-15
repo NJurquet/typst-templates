@@ -9,6 +9,7 @@
   supervisor: "Dr. Smith",
   tutor: "Prof. Johnson",
   uni-logo: image("ECAM_logo.jpg"),
+  uni-institution: "Haute École ICHEC - ECAM - ISFSC",
   company-logo: image("ECAM_logo.jpg"),
   company-name: "Company name Inc.",
   company-location: "Company City, Country",

@@ -13,6 +13,8 @@
   tutor: "",
   // University logo file path (as a `image` type).
   uni-logo: image,
+  // If university is part of a larger institution, you can add its name here.
+  uni-institution: "",
   // Company logo file path (as a `image` type).
   company-logo: image,
   // Company name.
@@ -62,13 +64,10 @@
   v(0.5cm)
 
   // Authors information
-  text(
-    if language == "en" { "Presented by" } else { "Présenté par" },
-    size: 14pt,
-  )
+  text(if language == "en" { "Presented by" } else { "Présenté par" })
   linebreak()
   for author in authors {
-    text(author, size: 14pt)
+    text(author)
     linebreak()
   }
 
@@ -76,12 +75,9 @@
 
   // Program information
   if program != "" {
-    text(
-      if language == "en" { "Student in" } else { "Étudiant en" },
-      size: 14pt,
-    )
+    text(if language == "en" { "Student in" } else { "Étudiant en" })
     linebreak()
-    text(program, size: 14pt, weight: "bold")
+    text(program, weight: "bold")
     v(0.6cm)
   }
 
@@ -98,7 +94,6 @@
         "Dans le cadre du " + { if report-type == "thesis" { "TFE" } else { "stage" } } + " réalisé au sein de"
       )
     },
-    size: 14pt,
   )
 
   v(0cm)
@@ -107,7 +102,7 @@
   {
     set image(height: 2.5cm)
     company-logo
-    text(company-name, size: 14pt, weight: "bold")
+    text(company-name, weight: "bold")
   }
 
   v(0cm)
@@ -122,9 +117,26 @@
   text(if language == "en" { " to " } else { " au " })
   period.end.display("[day] [month repr:short] [year]")
 
+  v(1cm)
+
+  // Supervisor and tutor information
+  text(
+    if report-type == "thesis" {
+      if language == "en" { "Promoter: " } else { "Promoteur : " }
+    } else {
+      if language == "en" { "Supervisor: " } else { "Superviseur : " }
+    },
+  )
+  h(1fr)
+  text(if language == "en" { "Tutor: " } else { "Tuteur : " })
+  linebreak()
+  text(supervisor)
+  h(1fr)
+  text(tutor)
+
   v(1fr)
 
-  text("Haute École ICHEC - ECAM - ISFSC", size: 14pt, weight: "bold")
+  if uni-institution != "" { text(uni-institution, weight: "bold") }
 
   parbreak()
 
@@ -135,7 +147,7 @@
     let year-two = year-one + 1
     return [Academic year #year-one -- #year-two]
   }
-  text(academic-year(), size: 14pt)
+  text(academic-year())
 
   // Display the paper's contents.
   pagebreak(weak: true)
