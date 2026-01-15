@@ -21,7 +21,7 @@ This template exports the `report` function with the following named arguments:
 -   `title`: The title of the report.
 -   `report-type`: The type of the report, either `"thesis"` or `"internship"`. Default is `"thesis"`.
 -   `authors`: An array of authors names.
--   `program`: Student program and year (e.g., "2nd year MSc in Industial Engineering").
+-   `program`: Student program and year.
 -   `supervisor`: Company thesis supervisor name.
 -   `tutor`: University tutor name.
 -   `uni-logo`: The image element with the path to the university logo.
